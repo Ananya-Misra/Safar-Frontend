@@ -1,4 +1,5 @@
 import { Button, Container, Text, Title, Stack, createStyles } from '@mantine/core';
+import { useRouter } from 'next/router';
 
 const useStyles = createStyles((theme) => ({
     heroContainer: {
@@ -32,6 +33,7 @@ const useStyles = createStyles((theme) => ({
 
 const HeroSection = () => {
     const { classes } = useStyles();
+    const router = useRouter();
 
     return (
         <Container fluid className={classes.heroContainer}>
@@ -42,8 +44,8 @@ const HeroSection = () => {
                 Explore the World, We’ll Handle the Planning.
             </Text>
             <Container spacing="md" className={classes.buttonStack}>
-                <Button size="md" className={classes.exploreButton}>Explore</Button>
-                <Button size="md" variant="outline">Live Like Local</Button>
+                <Button size="md" className={classes.exploreButton} onClick={() => router.push('/travel-plan')}>Explore</Button>
+                <Button size="md" variant="outline" onClick={() => router.push('/live-like-local')}>Live Like Local</Button>
             </Container>
         </Container>
     );

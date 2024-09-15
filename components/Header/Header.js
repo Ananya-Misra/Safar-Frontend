@@ -94,21 +94,6 @@ const HeaderSearch = () => {
               <IconMoonStars size="20" aria-label="dark color scheme icon" />
             )}
           </ActionIcon>
-
-          <Autocomplete
-            className={classes.search}
-            placeholder="Search"
-            icon={<IconSearch size={16} stroke={1.5} />}
-            data={[
-              "React",
-              "Angular",
-              "Vue",
-              "Next.js",
-              "Riot.js",
-              "Svelte",
-              "Blitz.js",
-            ]}
-          />
         </Group>
       </div>
     </Header>
